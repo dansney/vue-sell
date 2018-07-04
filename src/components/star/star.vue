@@ -28,7 +28,6 @@
 		        let score = Math.floor(this.score * 2) / 2;
 		        let hasDecimal = score % 1 !== 0;
 		        let integer = Math.floor(score);
-		        console.log(integer);
 		        for (let i = 0; i < integer; i++) {
 		          result.push(CLS_ON);
 		        }

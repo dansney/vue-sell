@@ -40,7 +40,7 @@
 		    </div>
 		    <shopcart ref="shopcart" :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></shopcart>
 		</div>
-	 	<food :food = "selectedFood" ref="food"></food>
+	 	<food :food = "selectedFood" ref="food" @add="addFood"></food>
  	</div>
 </template>
 
@@ -103,14 +103,14 @@
     		});
     	},
     	methods: {
-    		selectMenu(index,event) {
-    			if(event._constructed){
-    				return;
-    			}
-    			let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
-    			let el = foodList[index];
-    			this.foodsScroll.scrollToElement(el,300);
-    		},
+		     selectMenu(index, event) {
+		        if (!event._constructed) {
+		          return;
+		        }
+		        let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
+		        let el = foodList[index];
+		        this.foodsScroll.scrollToElement(el, 300);
+		      },
 		    selectFood(food, event) {
 		      if (!event._constructed) {
 		        return;

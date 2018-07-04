@@ -159,7 +159,6 @@
           .text
             line-height: 12px
             font-size: 10px
-
       .support-count
         position: absolute
         right: 12px
@@ -177,7 +176,6 @@
           margin-left: 2px
           line-height: 24px
           font-size: 10px
-
     .bulletin-wrapper
       position: relative
       height: 28px
